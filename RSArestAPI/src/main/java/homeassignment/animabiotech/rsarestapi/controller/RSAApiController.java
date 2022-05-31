@@ -48,10 +48,8 @@ public class RSAApiController {
     /*
         JSON
         {
-            add your id to the url and then:
             "signature": "your_signature_here",
             "data":"your_data_here"
-
         }
      */
     @PostMapping("/verify/{id}")
@@ -61,6 +59,4 @@ public class RSAApiController {
         String data = json.get("data");
         return rsaService.verify(data, signature, id);
     }
-
-
 }

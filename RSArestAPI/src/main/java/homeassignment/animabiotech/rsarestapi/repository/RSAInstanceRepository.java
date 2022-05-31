@@ -11,18 +11,6 @@ import java.util.UUID;
 public class RSAInstanceRepository {
     private final HashMap<String, RSAInstance> rsaInMemoryDB = new HashMap<>();
 
-    //TODO: delete this and find a way to mock
-//    public RSAInstanceRepository() {
-//        try {
-//            KeyPair keyPair1 = rsaService.generateKeyPair();
-//            KeyPair keyPair2 = rsaService.generateKeyPair();
-//            rsaInMemoryDB.put(UUID.randomUUID().toString(), new RSAInstance(keyPair1.getPublic(), keyPair1.getPrivate()));
-//            rsaInMemoryDB.put(UUID.randomUUID().toString(), new RSAInstance(keyPair2.getPublic(), keyPair2.getPrivate()));
-//        } catch (Exception e) {
-//            System.out.println("Error " + e);
-//        }
-//    }
-
     public String add(RSAInstance rsaInstance) {
         String id = UUID.randomUUID().toString();
         rsaInMemoryDB.put(id, rsaInstance);
