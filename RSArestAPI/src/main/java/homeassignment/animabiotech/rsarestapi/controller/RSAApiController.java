@@ -34,8 +34,8 @@ public class RSAApiController {
         return rsaService.create();
     }
 
-    // to get the signature use this Json format when sending a body to localhost:8080/sign/you_id
     /*
+    BODY:
         add a string to sign
      */
     @PostMapping("/sign/{id}")
@@ -44,8 +44,8 @@ public class RSAApiController {
         return rsaService.sign(data, id);
     }
 
-    // to get the signature use this Json format when sending a body to localhost:8080/sign
     /*
+    BODY:
         JSON
         {
             "signature": "your_signature_here",
