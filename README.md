@@ -4,6 +4,7 @@ Built with Spring Boot
 ## How to run it
 1. Clone the GitHub repository to your local machine
 2. Refresh Maven
+3. Run class RsaRestapiApplication.java
 
 ## API Calls
 **To generate a new RSA key pair and get it's ID:**
